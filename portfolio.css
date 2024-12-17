@@ -1,0 +1,93 @@
+@font-face {
+    font-family:"Lato Bold";
+    src:url(Lato/Lato-Bold.ttf);
+}
+@font-face {
+    font-family:"Sour Gummy";
+    src: url("Sour Gummy/SourGummy-VariableFont_wdth\,wght.ttf");
+}
+body{
+    background-image:url("coolbg.jpg");
+}
+.startAni{
+    z-index:2;
+    background-color:rgb(218, 246, 223);
+    font-size:60%;
+    text-align:center;
+    background-size:cover;
+    min-height:100%;
+    justify-content:center;
+    position:fixed;
+    padding:40px;
+    animation:disappear 4s forwards;
+    font-family:"Sour Gummy";
+}
+.startTxt{
+    position:relative;
+    left:calc(-100% - 50px);
+    animation:textAnimation 6s forwards;
+    margin:30px;
+}
+@keyframes disappear {
+    0%{opacity:100}
+    20%{opacity:100}
+    100%{opacity:0;}
+}
+@keyframes textAnimation {
+    0%{left:calc(-100% - 50px);}
+    5%{left:0%;}
+    100%{left:0%;}
+}
+.welcome{
+    font-family:"Sour Gummy";
+    background-color:rgb(161, 161, 201);
+    border-radius:10px;
+}
+.navbarStyle{
+    background-image:url("navbar.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin-bottom:30px;
+    z-index:0;
+}
+.titleStyle{
+    font-family:"Sour Gummy";
+    font-size:30px;
+    color:rgb(41, 41, 87);
+    animation:cutetitle 20s infinite;
+    margin:0;
+    z-index:0;
+}
+.navLinkStyle{
+    font-family:"Sour Gummy";
+    font-size:25px;
+    color:rgb(41, 41, 87);
+    transition:all 0.5s ease;
+    text-decoration:none;
+    z-index:0;
+}
+.navLinkStyle:hover{
+    color:rgb(107, 107, 117);
+}
+@keyframes cutetitle {
+    0% {transform:rotate(0deg);}
+    1% {transform:rotate(-2deg);}
+    2% {transform:rotate(0deg);}
+    5% {transform:rotate(-7deg); color:rgb(39, 142, 133);}
+    40%{transform:rotate(-7deg); color:rgb(39, 142, 133);}
+    45%{transform: rotate(0deg); color:rgb(39, 142, 133);}
+    50%{transform:rotate(0deg); color:rgb(39, 142, 133);}
+    51%{transform:rotate(2deg); color:rgb(39, 142, 133);}
+    52%{transform:rotate(0deg); color:rgb(39, 142, 133);}
+    55%{transform:rotate(7deg); color:rgb(41, 41, 87);}
+    95%{transform:rotate(7deg);}
+    100%{transform:rotate(0deg);}
+}
+@media only screen and (min-width: 320px) and (max-width: 550px) {
+    .navLinkStyle{
+        font-size:15px;
+    }
+    .titleStyle{
+        font-size:20px;
+    }
+}
